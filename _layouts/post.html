@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<style>
+  body {
+    background-image: url(/img/home/Gridlines.svg),
+      linear-gradient(to bottom right, #521164, #ac4daf, #521164);
+    background-color: #ffd4ca;
+  }
+  .post-container {
+    max-width: 1600px;
+    background-color: #ffd4ca;
+    padding-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -110px;
+    z-index: -1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Gluten", serif;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+    text-align: center;
+    margin: auto;
+  }
+
+  p {
+    font-family: "Libre Baskerville", serif;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  ul li {
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 1.5;
+    max-width: 1000px;
+    margin: auto;
+  }
+</style>
+
+<div class="post-container">{{post.title}} {{content}}</div>

@@ -1,0 +1,184 @@
+---
+layout: default
+---
+
+<style>
+  body {
+    background-image: url(/img/home/Gridlines.svg),
+      linear-gradient(to bottom right, #521164, #ac4daf, #521164);
+  }
+
+  .mightiestbanana {
+    width: 750px;
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    filter: drop-shadow(0px 1px 9px rgba(0, 0, 0, 0.671));
+  }
+
+  .aboutcontainer {
+    position: relative;
+    max-width: 930px;
+    margin: auto;
+  }
+
+  .aboutbox {
+    width: 930px;
+    display: flex;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    z-index: 1;
+  }
+
+  .slogan {
+    color: white;
+    text-align: center;
+    font-family: "Gluten", serif;
+    font-size: x-large;
+    margin-top: -46px;
+  }
+
+  .aboutmetitle {
+    font-family: "Gluten", serif;
+    font-size: 200%;
+    position: absolute;
+    top: 200px;
+    left: 440px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .underlinegif {
+    width: 400px;
+    margin-top: -5px;
+    margin-left: -120px;
+    position: absolute;
+    top: 180px;
+    left: 440px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .aboutmetext {
+    position: absolute;
+    top: 235px;
+    left: 440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: large;
+  }
+
+  .aboutclosing {
+    font-size: medium;
+  }
+  .aboutbutton {
+    position: absolute;
+    width: 220px;
+    top: 490px;
+    left: 430px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .clipboxcontainer {
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  .clipbox {
+    max-inline-size: 100%;
+    width: 1300px;
+    display: flex;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+  }
+
+  .findmeoutthere {
+    font-family: "Gluten", serif;
+    font-size: 150%;
+    position: absolute;
+    top: 67px;
+    left: 630px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contactme {
+    font-family: "Gluten", serif;
+    font-size: 150%;
+    position: absolute;
+    top: 264px;
+    left: 630px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .window {
+    background-color: #c45b16;
+    border: solid black;
+    border-radius: 30px;
+    padding: 20px;
+    font-family: "Gluten", serif;
+    font-size: 1.4rem;
+  }
+
+  .window-circle {
+    background-color: #7daf9c;
+    border: solid black;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+  }
+
+  .window-contents {
+    background-color: #ffd4ca;
+    border: solid black;
+    border-radius: 30px;
+    padding: 20px;
+  }
+</style>
+
+<img
+  class="mightiestbanana"
+  src="/img/home/MightiestBanana.png"
+  alt="Mightiest Banana"
+/>
+
+<div class="slogan">Streamer. Writer. Creator.</div>
+
+<div class="aboutcontainer">
+  <img class="aboutbox" src="/img/home/aboutbox.png" alt="About Me" />
+  <div class="aboutmetitle">About Me.</div>
+  <img class="underlinegif" src="/img/home/underline.gif" alt="Underline" />
+  <div class="aboutmetext">
+    <br /><br />I don't like having photos taken of me 😛<br />But hi! I'm a
+    streamer, writer, reader, and a<br />human being.<br /><br />Oh, and I have
+    a cat with one eye. <br /><br />
+    <div class="aboutclosing">Beáta Imre<br />a.k.a. the mighty banana</div>
+  </div>
+  <a href="/about">
+    <img class="aboutbutton" src="/img/home/aboutbutton.png" alt="About Button"
+  /></a>
+</div>
+
+<div class="window">
+  <div class="window-circle"></div>
+  Find Me Out There.
+  <div class="window-contents">more text</div>
+</div>
+
+<div class="clipboxcontainer">
+  <img class="clipbox" src="/img/home/clipbox.png" alt="Clip Box" />
+  <div class="findmeoutthere">Find Me Out There.</div>
+  <div class="contactme">Contact Me.</div>
+</div>
+
+<main>{{content}}</main>
