@@ -65,16 +65,17 @@ layout: default
 
   .aboutmetext {
     position: absolute;
-    top: 235px;
+    top: 270px;
     left: 440px;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 80px;
     font-size: large;
   }
 
   .aboutclosing {
     font-size: medium;
   }
+
   .aboutbutton {
     position: absolute;
     width: 220px;
@@ -84,49 +85,58 @@ layout: default
     padding-right: 20px;
   }
 
-  .clipboxcontainer {
-    position: relative;
-    max-width: 1300px;
+  .flex-container {
+    max-width: 830px;
+    display: flex;
     margin: auto;
+    z-index: 3;
+  }
+
+  .home-clips {
+    max-width: 740px;
+    position: absolute;
+    z-index: 2;
+    margin-left: 45px;
+    margin-top: 170px;
   }
 
   .clipbox {
-    max-inline-size: 100%;
-    width: 1300px;
-    display: flex;
-    float: none;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 120px;
+    flex: 1;
+    z-index: 3;
   }
 
-  .findmeoutthere {
-    font-family: "Gluten", serif;
-    font-size: 150%;
-    position: absolute;
-    top: 67px;
-    left: 630px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .contactme {
-    font-family: "Gluten", serif;
-    font-size: 150%;
-    position: absolute;
-    top: 264px;
-    left: 630px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .small-windows {
+    max-width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    display: flex;
   }
 
   .window {
     background-color: #c45b16;
     border: solid black;
     border-radius: 30px;
-    padding: 20px;
     font-family: "Gluten", serif;
     font-size: 1.4rem;
+    width: 350px;
+    margin-right: 5px;
+    flex: 1;
+  }
+
+  .window-2 {
+    background-color: #c45b16;
+    border: solid black;
+    border-radius: 30px;
+    font-family: "Gluten", serif;
+    font-size: 1.4rem;
+    width: 350px;
+    margin-left: 5px;
+    height: 165px;
   }
 
   .window-circle {
@@ -136,15 +146,51 @@ layout: default
     width: 12px;
     height: 12px;
     display: inline-block;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  .window-titles {
+    display: inline-block;
   }
 
   .window-contents {
     background-color: #ffd4ca;
     border: solid black;
     border-radius: 30px;
-    padding: 20px;
+    padding: 10px 20px 10px 20px;
+    margin: 15px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1rem;
+  }
+
+  .social-color-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: inline-block;
+    margin-left: -40px;
+    padding-top: 8px;
+  }
+
+  .social-color-links a {
+    color: black;
+    font-weight: bold;
+  }
+  .social-color-names {
+    height: 30px;
+    line-height: 30px;
+    padding-bottom: 15px;
+    margin: auto;
+    display: inline-block;
+    vertical-align: middle;
   }
 </style>
+
+{% include header.html %}
 
 <img
   class="mightiestbanana"
@@ -159,9 +205,9 @@ layout: default
   <div class="aboutmetitle">About Me.</div>
   <img class="underlinegif" src="/img/home/underline.gif" alt="Underline" />
   <div class="aboutmetext">
-    <br /><br />I don't like having photos taken of me 😛<br />But hi! I'm a
-    streamer, writer, reader, and a<br />human being.<br /><br />Oh, and I have
-    a cat with one eye. <br /><br />
+    I don't like having photos taken of me 😛 But hi! I'm a streamer, writer,
+    reader, and a human being.<br /><br />Oh, and I have a cat with one eye.
+    <br /><br />
     <div class="aboutclosing">Beáta Imre<br />a.k.a. the mighty banana</div>
   </div>
   <a href="/about">
@@ -169,16 +215,114 @@ layout: default
   /></a>
 </div>
 
-<div class="window">
-  <div class="window-circle"></div>
-  Find Me Out There.
-  <div class="window-contents">more text</div>
+<div class="flex-container">
+  <video autoplay muted preload="auto" loop class="home-clips">
+    <source src="/img/home/homeclips.mp4" type="video/mp4" />
+  </video>
+  <img class="clipbox" src="/img/home/clipboxonly.png" alt="Clip Box" />
 </div>
 
-<div class="clipboxcontainer">
-  <img class="clipbox" src="/img/home/clipbox.png" alt="Clip Box" />
-  <div class="findmeoutthere">Find Me Out There.</div>
-  <div class="contactme">Contact Me.</div>
+<div class="small-windows">
+  <div class="window">
+    <div class="window-circle"></div>
+    <div class="window-titles">Find Me Out There.</div>
+    <div class="window-contents">
+      <ul class="social-color-links">
+        <li>
+          <a
+            href="https://www.twitch.tv/mightiestbanana"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="/img/home/twitchcolor.svg"
+              alt="Mightiest Banana Twitch Channel"
+              width="30"
+              height="30"
+          /></a>
+          <div class="social-color-names">
+            <a
+              href="https://www.twitch.tv/mightiestbanana"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Twitch</a
+            >
+          </div>
+        </li>
+        <li>
+          <a
+            href="https://www.tiktok.com/@mighty.banana"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/img/home/tiktokcolor.svg"
+              alt="Mighty Banana TikTok Page"
+              width="30"
+              height="30"
+            />
+          </a>
+          <div class="social-color-names">
+            <a
+              href="https://www.tiktok.com/@mighty.banana"
+              target="_blank"
+              rel="noopener noreferrer"
+              >TikTok</a
+            >
+          </div>
+        </li>
+        <li>
+          <a
+            href="https://discord.gg/zBwWbVCZtk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/img/home/discordcolor.svg"
+              alt="Mighty Banana Discord Server"
+              width="30"
+              height="30"
+          /></a>
+          <div class="social-color-names">
+            <a
+              href="https://discord.gg/zBwWbVCZtk"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Discord</a
+            >
+          </div>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/mighty.banana"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/img/home/instacolor.svg"
+              alt="Mighty Banana Instagram Page"
+              width="30"
+              height="30"
+          /></a>
+          <div class="social-color-names">
+            <a
+              href="https://www.instagram.com/mighty.banana"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="window-2">
+    <div class="window-circle"></div>
+    <div class="window-titles">Contact Me.</div>
+    <div class="window-contents">
+      <p><b>Email:</b> mightybanana22@gmail.com</p>
+    </div>
+  </div>
 </div>
 
 <main>{{content}}</main>

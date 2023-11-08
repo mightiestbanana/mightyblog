@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<style>
+  body {
+    background-image: url(/img/home/Gridlines.svg),
+      linear-gradient(to bottom right, #521164, #ac4daf, #521164);
+  }
+
+  .book-blog-container {
+    max-width: 1600px;
+    background-color: #ffd4ca;
+    padding-top: 6px;
+    padding-bottom: 90px;
+  }
+
+  .book-blog {
+    width: 620px;
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    filter: drop-shadow(0px 1px 9px rgba(0, 0, 0, 0.671));
+  }
+
+  .all-posts-title {
+    font-family: "Gluten", serif;
+    font-size: 3rem;
+    text-align: center;
+    padding: 80px 0 50px 0;
+  }
+
+  .all-posts li {
+    list-style-type: none;
+    text-align: center;
+    margin: 75px;
+  }
+
+  .all-posts a {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+</style>
+
+<div class="book-blog-container">
+  {% include header.html %}
+
+  <img src="/img/bookblog/bookblog.png" class="book-blog" />
+
+  <div class="all-posts">
+    <div class="all-posts-title">👇 All Posts 👇</div>
+    {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </div>
+</div>

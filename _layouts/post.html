@@ -11,11 +11,7 @@ layout: default
   .post-container {
     max-width: 1600px;
     background-color: #ffd4ca;
-    padding-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -110px;
-    z-index: -1;
+    padding-top: 6px;
   }
 
   h1,
@@ -28,29 +24,128 @@ layout: default
   }
 
   h1 {
-    font-size: 2.7rem;
     text-align: center;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
     margin: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    max-width: 1000px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    max-width: 1000px;
   }
 
   p {
     font-family: "Libre Baskerville", serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
   }
 
-  h2,
-  h3,
+  p a{
+    font-weight: bold;
+    color: black;
+  }
+
   h4,
   h5,
   h6,
   p,
-  li,
-  ul li {
+  li {
     padding-left: 40px;
     padding-right: 40px;
     line-height: 1.5;
     max-width: 1000px;
     margin: auto;
   }
+
+  img[alt="Get It On Amazon"] {
+    width: 320px;
+    padding: 7px 0 7px 0;
+  }
+
+  .separator {
+    background-color: #c45b16;
+    border: solid black;
+    border-width: 0.1em;
+    width: 950px;
+    height: 3px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .post-gif {
+    position: relative;
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 150px;
+  }
+
+  aside {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    border: solid 10px #78288f;
+    border-radius: 60px;
+    background-color: #7DAF9C;
+  }
+
+  .recent-posts-title {
+    font-family: "Gluten", serif;
+    font-size: 2rem;
+    color: white;
+    padding-bottom: 16px;
+  }
+
+  aside a {
+  text-decoration: none;
+  color: white;
+  }
+
+  aside li {
+    list-style: none;
+  }
+
+  aside li::before {
+    content: "\2022";
+    color: white;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
 </style>
 
-<div class="post-container">{{post.title}} {{content}}</div>
+<div class="post-container">
+  {% include header.html %}
+  <br />
+  <h1>{{page.title}}</h1>
+  <br /><br />
+  {{content}}
+  <aside>
+    <div class="recent-posts-title">Recent Posts</div>
+    {% for post in site.posts limit:5 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </br></br>
+    <div class="recent-posts-title"><a href="/book-blog">See All</a></div>
+  </aside>
+  <p></br></p>
+</div>

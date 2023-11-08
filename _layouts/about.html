@@ -1,0 +1,260 @@
+---
+layout: default
+---
+
+<style>
+  body {
+    background-image: url(/img/home/Gridlines.svg),
+      linear-gradient(to bottom right, #521164, #ac4daf, #521164);
+  }
+
+  .aboutme {
+    width: 750px;
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    filter: drop-shadow(0px 1px 9px rgba(0, 0, 0, 0.671));
+  }
+
+  .about-container {
+    position: relative;
+    max-width: 930px;
+    margin: auto;
+  }
+
+  .aboutboxlong {
+    width: 930px;
+    display: flex;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    z-index: 1;
+  }
+
+  .about-title {
+    font-family: "Gluten", serif;
+    font-size: 200%;
+    position: absolute;
+    top: 140px;
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .about-text {
+    position: absolute;
+    top: 200px;
+    padding-left: 50px;
+    padding-right: 420px;
+    font-size: large;
+  }
+
+  .hi-gif-parent {
+    display: inline-flex;
+  }
+
+  .hi-gif-text {
+    width: 400px;
+  }
+
+  .hi-gif-box {
+    width: 400px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+  }
+
+  .giphy-embed-hi {
+    width: 345;
+    height: 288;
+    padding-left: 467px;
+    padding-top: 41px;
+    position: absolute;
+  }
+
+  .game-gif-parent {
+    display: inline-flex;
+  }
+
+  .game-gif-text {
+    width: 400px;
+  }
+
+  .game-gif-box {
+    width: 350px;
+    padding-bottom: 20px;
+    z-index: 3;
+    padding-right: 30px;
+  }
+
+  .giphy-embed-game {
+    width: 300;
+    height: 250;
+    padding-left: 25px;
+    padding-top: 25px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .aboutclosing {
+    font-size: medium;
+  }
+  .aboutbutton {
+    position: absolute;
+    width: 220px;
+    top: 490px;
+    left: 430px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .popeye {
+    width: 700px;
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    padding: 15px;
+    border: solid black;
+    background-color: #c45b16;
+    border-radius: 60px;
+  }
+
+  .about-closing-container {
+    position: relative;
+    max-width: 620px;
+    margin: auto;
+  }
+
+  .about-closing-box {
+    width: 600px;
+    display: flex;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    z-index: 1;
+  }
+
+  .about-closing-text {
+    position: absolute;
+    top: 60px;
+    padding-left: 80px;
+    padding-right: 20px;
+    font-size: large;
+  }
+
+  .about-closing-text a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+
+  .bye-gif-parent {
+    display: inline-flex;
+  }
+
+  .bye-gif-text {
+    width: 200px;
+  }
+
+  .giphy-embed-bye {
+    width: 240;
+    height: 200;
+    margin-left: 20px;
+    z-index: 2;
+    border: solid black;
+    background-color: #78288F;
+    border-radius: 60px;
+    padding: 7px;
+  }
+</style>
+
+{% include header.html %}
+
+<img class="aboutme" src="/img/about/aboutme.png" alt="About Me" />
+
+<div class="about-container">
+  <img class="aboutboxlong" src="/img/about/aboutboxlong.png" alt="About Me" />
+  <div class="about-title">Hi. Hola. Konnichiwa. Szia. Bonjour.</div>
+  <div class="about-text">
+    <div class="hi-gif-parent">
+      <div class="hi-gif-text">
+        My name is Beáta. Pronounced Bee-AH-tuh. I was born in Canada but my
+        parents emigrated from Hungary. I’ve been reading avidly ever since I
+        was able to, and my preferred genres are romance, fantasy, and
+        sci-fi.<br /><br />
+        My favorite and most formative books / series include:
+        <ul>
+          <li>Throne of Glass series by Sarah J. Maas</li>
+          <li>Inheritance Cycle by Christopher Paolini</li>
+          <li>Legends & Lattes by Travis Baldree</li>
+          <li>Percy Jackson & The Lightning Thief series by Rick Riordan</li>
+        </ul>
+      </div>
+      <img class="hi-gif-box" src="/img/about/higifbox.png" />
+      <iframe
+        src="https://giphy.com/embed/rQ5cWOkvXfoTUZLIPh"
+        class="giphy-embed-hi"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+    Apart from reading, I work in communications, and I’m also a streamer,
+    actor, and writer. I’m currently working on my debut novel, which is a
+    fantasy book revolving around themes of trauma, PTSD, and womanhood set in a
+    medieval, magic-filled world (with dragons). I’m super passionate about
+    books that intertwine mental illnesses and real-world struggles with fantasy
+    themes, and I can’t wait to release my own take on this concept.<br /><br />
+    <div class="game-gif-parent">
+      <iframe
+        src="https://giphy.com/embed/k5PBzy5e7mLogC2XXu"
+        frameborder="0"
+        class="giphy-embed-game"
+        allowfullscreen
+      ></iframe>
+      <img class="game-gif-box" src="/img/about/gamegifbox.png" />
+      <div class="game-gif-text">
+        I also play video games on Xbox and PC! My fave and most formative games
+        include (but are certainly not limited to):
+        <ul>
+          <li>Elder Scrolls V: Skyrim</li>
+          <li>Dragon Age Inquisition</li>
+          <li>Mirror's Edge</li>
+          <li>Sims (especially Sims 2 and Sims 3)</li>
+          <li>Minecraft</li>
+        </ul>
+        I also have a cat that I adopted about a year and a half ago who’s
+        missing an eye and has a few scars. He’s my traumatized little bean. Say
+        hi to Popeye 👇
+      </div>
+    </div>
+  </div>
+</div>
+<img src="/img/about/popeye.jpg" class="popeye" />
+<div class="about-closing-container">
+  <img src="/img/about/aboutclosingbox.png" class="about-closing-box" />
+  <div class="about-closing-text">
+    
+    <div class="bye-gif-parent">
+      <div class="bye-gif-text">I’m active on
+        <a href="https://www.instagram.com/mighty.banana/">Insta,</a>
+        <a href="https://www.twitch.tv/mightiestbanana">Twitch,</a> and
+        <a href="https://www.tiktok.com/@mighty.banana">TikTok</a> if you’re
+        interested in saying hi to me! I promise I don’t bite. Usually.</br></br>
+        That’s pretty much it. Welcome 👋</div>
+      <iframe
+        src="https://giphy.com/embed/mP8YqtjCNOB9HLyrn0"
+        frameborder="0"
+        class="giphy-embed-bye"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <br /><br /></br>Oh, yeah. I also extensively overuse gifs from The Office.
+    Consider yourself warned.
+  </div>
+</div>
+<main>{{content}}</main>
