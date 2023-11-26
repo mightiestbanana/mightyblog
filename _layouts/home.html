@@ -85,14 +85,14 @@ layout: default
     padding-right: 20px;
   }
 
-  .flex-container {
+  .game-console {
     max-width: 830px;
     display: flex;
     margin: auto;
     z-index: 3;
   }
 
-  .home-clips {
+  #game-console__screen {
     max-width: 740px;
     position: absolute;
     z-index: 2;
@@ -100,13 +100,25 @@ layout: default
     margin-top: 170px;
   }
 
-  .clipbox {
+  .game-console__screen--off {
+    filter: grayscale(60%);
+  }
+
+  .game-console__body {
     width: 400px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 120px;
     flex: 1;
     z-index: 3;
+  }
+
+  .game-console__switch {
+    cursor: pointer;
+  }
+
+  .game-console__switch--off {
+    transform: rotate(180deg);
   }
 
   .small-windows {
@@ -191,6 +203,21 @@ layout: default
   }
 </style>
 
+<script>
+  window.addEventListener("load", initializeListeners);
+
+  function initializeListeners() {
+    const consoleSwitch = document.getElementById("game-console__switch");
+    const consoleScreen = document.getElementById("game-console__screen");
+
+    consoleSwitch.addEventListener("click", () => {
+      consoleSwitch.classList.toggle("game-console__switch--off");
+      consoleScreen.paused ? consoleScreen.play() : consoleScreen.pause();
+      consoleScreen.classList.toggle("game-console__screen--off");
+    });
+  }
+</script>
+
 {% include header.html %}
 
 <img
@@ -221,11 +248,21 @@ layout: default
   </div>
 </div>
 
-<div class="flex-container">
-  <video autoplay muted preload="auto" loop class="home-clips">
+<img
+  id="game-console__switch"
+  src="/img/home/clipbox-switch.png"
+  alt="Switch"
+/>
+
+<div class="game-console">
+  <video autoplay muted preload="auto" loop id="game-console__screen">
     <source src="/img/home/homeclips.mp4" type="video/mp4" />
   </video>
-  <img class="clipbox" src="/img/home/clipboxonly.png" alt="Clip Box" />
+  <img
+    class="game-console__body"
+    src="/img/home/clipboxonly.png"
+    alt="Clip Box"
+  />
 </div>
 
 <div class="small-windows">
